@@ -1,0 +1,72 @@
+/* colors
+    Primary-1 : #072AC8
+    Primary-2 : #43D2FF
+    Primary-3 : #A2D6F9
+    Primary-4 : #D1EDFF
+
+    Neutral-1 : #292E47
+    Neutral-2 : #6B708D
+    Neutral-3 : #F2F4FC
+    Neutral-4 : #ECF7FF
+
+    Secondary : #FFC600
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* 
+  100 - Thin
+  300 - Light
+  400 - Regular
+  500 - Medium
+  700 - Bold
+  900 - Black
+*/
+
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #6b708d;
+}
+
+html {
+    font-size: 16px;
+    /*font-size base*/
+}
+
+body {
+    font-weight: 400;
+    font-size: 1.25rem;
+    /* 20px */
+    line-height: 1.875rem;
+}
+
+/* Headings*/
+h1 {
+    font-weight: 700;
+    font-size: 3.75rem;
+    /* 60px */
+    line-height:4.40rem ;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 3.125rem;
+    /* 50px */
+    line-height:3.67rem ;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    /* 40px */
+    line-height:2.93rem; 
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    /* 24px */
+    line-height: 1.75rem;
+}
