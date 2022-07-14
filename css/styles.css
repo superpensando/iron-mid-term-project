@@ -1,7 +1,7 @@
 /* colors
     Primary-1 : #072AC8
     Primary-2 : #43D2FF
-    Primary-3 : #A2D6F9
+    Primary-3 : #A2D6F9 -hover
     Primary-4 : #D1EDFF
 
     Neutral-1 : #292E47
@@ -69,4 +69,115 @@ h4 {
     font-size: 1.5rem;
     /* 24px */
     line-height: 1.75rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+}
+
+/* Header */
+.header__wrapper {
+    padding:0 1.875rem 1.125rem 1.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.header__logo,
+.header__navigation {
+    display:flex;
+    align-items: center;
+}
+.header__menu {
+    width:1rem;
+    height: 1rem;
+    padding:1.5625rem;
+    display:none;
+}
+.header__menu.isOpen{
+    background: #c8c8c8;
+}
+.header__menu.isOpen + .header__navigation-list {
+    position: absolute;
+    top:4.0625rem;
+    left:0;
+    display:flex;
+    flex-direction: column;
+    background: #c8c8c8;
+    width:calc(100% - 2.5rem);
+    padding:1.25rem;
+}
+.header__menu.isOpen + .header__navigation-list .header__navigation-list-item {
+    padding-bottom:1.25rem;
+    padding-right: 0;
+}
+.header__menu.isOpen + .header__navigation-list .header__navigation-list-item:last-child {
+    padding-bottom: 0;
+}
+
+.header__navigation-list {
+    display:flex;
+}
+.header__navigation-list-item {
+    padding-right: 3.75rem;
+}
+.header__navigation-list-item:last-child{
+    padding-right:0; 
+}
+.header__navigation-list-item.active a,
+.header__navigation-list-item:active a,
+.header__navigation-list-item:focus a {
+    color: #072ac8;
+}
+.header__navigation-list-item a {
+    font-size:1.0625rem; /* 17px*/
+    font-weight: 500;
+    color: #6b708d;
+    text-decoration: none;
+}
+.header__button {
+    padding: 0.9375rem 0.9375rem;
+    background-color: #072ac8;
+    font-size: 1.0625rem; /* 17px*/
+    color:#FFF;
+    border:none; 
+    cursor:pointer;
+}
+/* End Header */
+
+   
+
+
+
+/***
+   MediaQueries
+***/
+
+/* < 990px Mobile & Tablet portrait */
+@media (max-width: 990px) { 
+    /* Header */
+    .header__navigation-list,
+    .header__button{
+        display:none; 
+    }
+    .header__menu {
+        display:block; 
+    }
+    /* End Header */
+}
+
+/* > 990px Tablet Landscape & Desktop */
+@media (min-width: 990px) { 
+    /* Header */
+    .header__wrapper {
+        padding: 5rem 1rem 1rem 1rem;
+    }
+    .header__navigation-list-item a:hover {
+        color:#A2D6F9;
+    }
+    /* End Header */
 }
