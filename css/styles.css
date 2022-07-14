@@ -128,7 +128,7 @@ img {
 .header__navigation-list-item:last-child{
     padding-right:0; 
 }
-.header__navigation-list-item.active a,
+.header__navigation-list-item.isActive a,
 .header__navigation-list-item:active a,
 .header__navigation-list-item:focus a {
     color: #072ac8;

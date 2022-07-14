@@ -11,9 +11,9 @@ window.addEventListener('load', () => {
     const navigationAll = document.querySelectorAll('.header__navigation-list-item');
     navigationAll.forEach(element => {
         element.addEventListener('click', (Event) => {
-            const navigationActive = document.querySelector('.active');
-            navigationActive.classList.remove("active");
-            Event.path[1].classList.add("active");
+            const navigationActive = document.querySelector('.isActive');
+            navigationActive.classList.remove("isActive");
+            Event.path[1].classList.add("isActive");
         });
     });
     
