@@ -245,7 +245,14 @@ img {
     margin-top: 0.625rem;
 }
 
-
+/* Companies Section */
+.companies-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
 
 /***
    MediaQueries
@@ -322,6 +329,21 @@ img {
     .hero-section__card2 {
         max-width: 17.18rem;
     }
+
+    /* Companies Section */
+    .companies-list{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        place-items:  center;
+    }
+    .companies-list-item{
+        height: 6rem;
+    }
+    .companies-list-item:last-child {
+        display:none; 
+    }
+
+
 
 }
 
