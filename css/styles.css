@@ -307,6 +307,83 @@ img {
     padding-top:2.5rem;
 }
 
+/* Testimonial Section */
+.testimonial.section {
+    padding-left:0;
+    padding-right:0; 
+}
+.testimonial {
+    position: relative;
+    width:100%;
+    height: 31.25rem;
+    background-image: url("./../assets/img/testimonial-section/orbit.png");
+    background-position: center;
+    background-size: contain; 
+    background-color: #292E47;
+}
+.testimonial__wrapper {
+    display:flex;
+    flex-grow: 1;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.testimonial__memoji {
+    position:absolute;
+    width:9.375rem;
+    height:9.375rem;
+}
+.testimonial__memoji1 { top:3.125rem; left:3.125rem;}
+.testimonial__memoji2 { bottom:3.125rem; right:3.125rem;}
+.testimonial__memoji3 { bottom:3.125rem; left:3.125rem;}
+.testimonial__memoji4 { top:3.125rem; right:3.125rem;}
+.testimonial__title,
+.testimonial__quote {
+    text-align: center;
+}
+.testimonial__title {
+    margin-top:3rem;
+    color: #FFF;
+    max-width:70%;
+    line-height: 150%;
+}
+.testimonial__quote {
+    color: #FFC600; 
+    max-width: 52%;
+    font-weight: 500;
+    line-height: 160%;
+}
+.testimonial__customer {
+    height:3.125rem; 
+}
+.testimonial__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial__customer {
+    width:3.125rem;
+    height:3.125rem;
+    border-radius:50%;
+}
+.testimonial__description {
+    position: relative;
+    margin-left:0.625rem; 
+}
+.testimonial__name {
+    font-size: 1.0625rem;
+    color:#A2D6F9;
+
+}
+.testimonial__app {
+    position: relative;
+    margin-top:-8px; 
+    font-size: 0.8125rem;
+    color:#FFF;
+}
 
 
 /***
@@ -332,6 +409,13 @@ img {
 
     .section {
         max-width: 80%;
+    }
+    .testimonial.section {
+        max-width: 100%;
+    }
+    .testimonial__memoji {
+        width:6.25rem;
+        height:6.25rem;
     }
 
     /* Header */
@@ -444,8 +528,11 @@ img {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
     }
+    /* Testimonial Section*/
+    .testimonial__memoji {
+        display:none;
+    }
 }
-
 
 /* Mobile*/
 @media (max-width: 480px) {
@@ -464,6 +551,15 @@ img {
 
     .hero-section__img {
         max-width: 100%;
+    }
+
+    /* Testimonial Section*/
+    .testimonial__title {
+        font-size:30px;
+        max-width: 80%;
+    }
+    .testimonial__quote {
+        max-width: 80%;
     }
 
 }
