@@ -113,10 +113,21 @@ img {
     padding-left: 1.875rem;
     padding-right: 1.875rem;
 }
-
-.section+.section {
-    padding-top: 8.125rem;
+.section + .section {
+    margin-top: 8.125rem;
 }
+.section__title {
+    color:#292E47;
+}
+.section__title + .section__wrapper {
+    margin-top: 4rem;
+}
+.companies > *,
+.projects > * {
+    margin-left:3.125rem; 
+    margin-right:3.125rem;
+}
+
 
 /* Header */
 .header__wrapper {
@@ -254,6 +265,50 @@ img {
     grid-row-gap: 1rem;
 }
 
+/* Projects Section */
+.projects .section__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 1rem;
+}
+.projects__content {
+    padding:1.875rem;
+    background-color: #FFF;
+    box-shadow: 0px 38.7755px 77.551px rgba(0, 0, 0, 0.1);
+}
+.projects__img {
+    width: 100%;
+    height: 15rem;
+}
+.projects__title {
+    font-weight: 500;
+    color:#292E47;
+}
+
+.projects__description {
+    font-size:1.0625rem;
+    color:#6B708D;
+}
+.projects__link{
+    font-size:1.0625rem;
+    display:inline-block;
+    color: #072ac8;
+    text-decoration: none;
+}
+.projects__link:hover {
+    text-decoration:underline;
+}
+.projects__title + .projects__description{
+    padding-top:0.625rem;
+}
+.projects__description + .projects__link {
+    padding-top:2.5rem;
+}
+
+
+
 /***
    MediaQueries
 ***/
@@ -330,6 +385,11 @@ img {
         max-width: 17.18rem;
     }
 
+    .companies > *,
+    .projects > * {
+    margin-left: 0; 
+    margin-right:0;
+    }
     /* Companies Section */
     .companies-list{
         grid-template-columns: repeat(2, 1fr);
@@ -343,8 +403,11 @@ img {
         display:none; 
     }
 
-
-
+    /* Projects Section */
+    .projects .section__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
 }
 
 /* Mobile & Table Portrait 1*/
@@ -374,6 +437,12 @@ img {
 
     .hero-section__img {
         max-width: 80%;
+    }
+
+     /* Projects Section */
+     .projects .section__wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
     }
 }
 
