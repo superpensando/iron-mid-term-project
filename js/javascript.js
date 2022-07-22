@@ -16,7 +16,33 @@ window.addEventListener('load', () => {
             Event.path[1].classList.add("isActive");
         });
     });
-    
- 
     /* End Header */
+
+    /* Projects */
+    const recentProjectsTitle = document.querySelectorAll(".projects__title");
+    const recentProjectsBody = document.querySelectorAll(".projects__description");
+
+    const getDom = (selectDom,finalResId, finalResEl) => {
+        selectDom.forEach(
+            (el2, index) => {
+                const indexEl2 = index + 1;
+                if (indexEl2 === finalResId && finalResId < 4) {
+                    el2.innerHTML = `${finalResEl}`;
+                }                                     
+            }
+        );
+    };
+
+    async function getPosts() {
+        const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+        const finalRes = await res.json(); 
+        finalRes.forEach(
+            (el1) => {
+                getDom(recentProjectsTitle,el1.id, el1.title);
+                getDom(recentProjectsBody,el1.id, el1.body);            
+            }
+        );     
+    }
+    getPosts();
+    /* End Projects */
 });
