@@ -21,13 +21,17 @@ window.addEventListener('load', () => {
     /* Projects */
     const recentProjectsTitle = document.querySelectorAll(".projects__title");
     const recentProjectsBody = document.querySelectorAll(".projects__description");
-
-    const getDom = (selectDom,finalResId, finalResEl) => {
+    const recentProjectsImg = document.querySelectorAll(".projects__img");
+    const getDom = (selectDom,selectDomType,finalResId, finalResEl) => {
         selectDom.forEach(
             (el2, index) => {
                 const indexEl2 = index + 1;
-                if (indexEl2 === finalResId && finalResId < 4) {
-                    el2.innerHTML = `${finalResEl}`;
+                if (indexEl2 === finalResId && finalResId < 4) {  
+                    if (selectDomType === "img") {
+                        el2.src = `${finalResEl}`;
+                    } else {
+                        el2.innerHTML = `${finalResEl}`;
+                    }
                 }                                     
             }
         );
@@ -38,11 +42,23 @@ window.addEventListener('load', () => {
         const finalRes = await res.json(); 
         finalRes.forEach(
             (el1) => {
-                getDom(recentProjectsTitle,el1.id, el1.title);
-                getDom(recentProjectsBody,el1.id, el1.body);            
+                getDom(recentProjectsTitle,"",el1.id, el1.title);
+                getDom(recentProjectsBody,"",el1.id, el1.body);       
             }
         );     
     }
+
+    async function getPostsImg() {
+        const res = await fetch("https://jsonplaceholder.typicode.com/photos");
+        const finalRes = await res.json(); 
+        finalRes.forEach(
+            (el1) => {   
+                getDom(recentProjectsImg,"img",el1.id, el1.url);       
+            }
+        );     
+    }
+
     getPosts();
+    getPostsImg();
     /* End Projects */
 });
