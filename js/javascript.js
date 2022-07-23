@@ -5,8 +5,11 @@
         menuOpenClose.classList.toggle("isOpen");
     });
 
-    
-  
+    const navigationButton = document.querySelector('.header__button');
+    navigationButton.addEventListener('click', () => {
+        window.location.href='/contact.html';
+    });
+
     const navigationAll = document.querySelectorAll('.header__navigation-list-item');
     navigationAll.forEach(element => {
         element.addEventListener('click', (Event) => {
