@@ -21,6 +21,7 @@
     const recentProjectsTitle = document.querySelectorAll(".projects__title");
     const recentProjectsBody = document.querySelectorAll(".projects__description");
     const recentProjectsImg = document.querySelectorAll(".projects__img");
+
     const getDom = (selectDom,selectDomType,finalResId, finalResEl) => {
         selectDom.forEach(
             (el2, index) => {
@@ -64,7 +65,6 @@
     /* Newsletter */
     async function createEmail(e) {
         e.preventDefault();
-        console.log(newsletterEmail)
         const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
           headers: {
             "Content-Type": "application/json",
@@ -75,10 +75,18 @@
           }),
         });
         const finalRes = await res.status;
-        console.log(finalRes);
+        //console.log(finalRes);
+        switch(finalRes){
+            case 201:
+                newsletterFieldset.innerHTML="<div class='newsletter__message'>Thank you! Your submission has been received!</div>";
+                break;
+            case 405:
+                messageSuccess.innerHTML="<div class='newsletter__message'>I'm sorry! Your submission have a problem, contact with the administrator</div>";
+                break;     
+        }
       }
       
-    
+    const newsletterFieldset = document.querySelector(".newsletter__fieldset");
     const newsletterEmail = document.querySelector('.newsletter__input-email').value;
     const newsletterButton = document.querySelector('.newsletter__button');
     newsletterButton.addEventListener("click", createEmail);

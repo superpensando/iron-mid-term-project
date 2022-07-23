@@ -316,6 +316,7 @@ img {
     color: #6B708D;
 }
 
+
 .projects__link {
     font-size: 1.0625rem;
     display: inline-block;
@@ -588,11 +589,18 @@ img {
 .newsletter__input-email+.newsletter__button {
     margin-left: 1.5625rem;
 }
+.newsletter__message {
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #ddd;
+}
 
 /* Footer */
 .footer {
     padding-top:12.5rem;
     padding-bottom:6.25rem;
+    opacity:0.7;
 }
 .footer__wrapper {
     display:flex;
