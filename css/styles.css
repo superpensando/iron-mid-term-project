@@ -309,11 +309,13 @@ img {
 .projects__title {
     font-weight: 500;
     color: #292E47;
+    min-height:3.75rem;
 }
 
 .projects__description {
     font-size: 1.0625rem;
     color: #6B708D;
+    min-height: 14.125rem;
 }
 
 

@@ -42,8 +42,12 @@
         const finalRes = await res.json(); 
         finalRes.forEach(
             (el1) => {
-                getDom(recentProjectsTitle,"",el1.id, el1.title);
-                getDom(recentProjectsBody,"",el1.id, el1.body);       
+                const postTitle=el1.title;
+                const postTitleShort=postTitle.substring(0, 30) + "...";
+                const postBody=el1.body;
+                const postBodyShort=postBody.substring(0, 300) + "...";
+                getDom(recentProjectsTitle,"",el1.id, postTitleShort);
+                getDom(recentProjectsBody,"",el1.id, postBodyShort);       
             }
         );     
     }
