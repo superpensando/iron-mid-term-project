@@ -1,5 +1,4 @@
 
-window.addEventListener('load', () => {
     /* Header */
     const menuOpenClose = document.querySelector('.header__menu');
     menuOpenClose.addEventListener('click', () => {
@@ -61,4 +60,27 @@ window.addEventListener('load', () => {
     getPosts();
     getPostsImg();
     /* End Projects */
-});
+
+    /* Newsletter */
+    async function createEmail(e) {
+        e.preventDefault();
+        console.log(newsletterEmail)
+        const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+          body: JSON.stringify({
+            email: newsletterEmail,
+          }),
+        });
+        const finalRes = await res.status;
+        console.log(finalRes);
+      }
+      
+    
+    const newsletterEmail = document.querySelector('.newsletter__input-email').value;
+    const newsletterButton = document.querySelector('.newsletter__button');
+    newsletterButton.addEventListener("click", createEmail);
+    /* End Newsletter*/
+
