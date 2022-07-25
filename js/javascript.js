@@ -72,9 +72,10 @@
                 const postBody=el1.body;
                 const postBodyShort=postBody.substring(0, 160) + "...";
                 setDom(recentProjectsTitle,"",el1.id, postTitleShort);
-                setDom(recentProjectsImg,"",el1.id, postTitleShort);
                 setDom(recentProjectsBody,"",el1.id, postBodyShort);
+                setDom(recentProjectsImg,"alt",el1.id, postTitleShort);
                 setDom(recentProjectsLink,"href", el1.id, "project.html");
+                
             }
         );     
     }
@@ -112,6 +113,7 @@
                     setDom(detailProjectTitle,"",el.id, postTitleShort);
                     setDom(detailProjectBody,"",el.id, postBodyShort);
                     setDom(detailProjectBodyFull,"",el.id, postBody);
+                    setDom(detailProjectsImg,"alt",el.id, postTitleShort);
                 }
             }
         );     
