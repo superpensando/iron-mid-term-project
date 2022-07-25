@@ -118,7 +118,7 @@
             }
         );     
     }
-    async function getPostsDetailImg(urlId) {
+    async function getPostDetailImg(urlId) {
         const res = await fetch("https://jsonplaceholder.typicode.com/photos");
         const finalRes = await res.json(); 
         finalRes.forEach(
@@ -135,7 +135,7 @@
             const urlParams = new URLSearchParams(urlSearch);
             const urlId = urlParams.get('id');
             getPostDetail(Number(urlId));
-            getPostsDetailImg(Number(urlId));
+            getPostDetailImg(Number(urlId));
         }
     });
     /* Project Details*/
