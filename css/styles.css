@@ -860,6 +860,9 @@ img {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
     }
+    .projects__description {
+        min-height: auto;
+    }
 
     /* Testimonial Section*/
     .testimonial__memoji {
@@ -907,6 +910,12 @@ img {
     .newsletter__icon::after {
         top: 1.25rem;
     }
+
+    /* Project Detail Section*/
+    .project-detail__subtitle {
+        flex-direction: column;
+    }
+    /* Project Detail Section*/
 
     /* Footer */
     .footer__wrapper {
