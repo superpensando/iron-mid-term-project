@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Ironhack - Contact</title>
+</head>
+
+<body>
+
+    <!--Header-->
+    <header class="header">
+        <section class="container">
+            <div class="header__wrapper">
+                <h1 class="header__logo">
+                    <a href="/index.html" title="Home">
+                        <img src="./assets/img/logos/circle.svg" alt="Circle" />
+                    </a>
+                </h1>
+                <nav class="header__navigation">
+                    <div class="header__menu">
+                        <img src="./assets/icons/bars-solid.svg" alt="Menu" />
+                    </div>
+                    <ul class="header__navigation-list">
+                        <li class="header__navigation-list-item isActive"><a href="/index.html" title="Home">Home</a>
+                        </li>
+                        <li class="header__navigation-list-item"><a href="/index.html#projects"
+                                title="Projects">Projects</a></li>
+                        <li class="header__navigation-list-item"><a href="/index.html#services"
+                                title="Services">Services</a></li>
+                    </ul>
+                </nav>
+                <button class="header__button button" type="button">Contact Us</button>
+            </div>
+        </section>
+    </header>
+    <!--End Header-->
+    <!--Contact Us -->
+    <section class="contact section container">
+        <h1 class="contact__title section__mainTitle">
+            Contact Us
+        </h1>
+        <form id="contact__form" class="contact__form" action="" method="post">
+            <!-- Name: Email: Comment: Receive email updates? Submit -->
+            <fieldset class="contact__fieldset">
+                <label class="contact__label" for="name">Full Name*:</label>
+                <input class="contact__form-element" type="text" id="name" name="name" required=""
+                    placeholder="Enter your full name">
+            </fieldset>
+            <fieldset class="contact__fieldset">
+                <label class="contact__label" for="email">Email:</label>
+                <input class="contact__form-element" type="email" name="email" id="email"
+                    placeholder="Enter your email address" />
+            </fieldset>
+            <fieldset class="contact__fieldset">
+                <label class="contact__label" for="phone">Phone:</label>
+                <input class="contact__form-element" type="phone" name="phone" id="phone"
+                    placeholder="Enter your phone number" />
+            </fieldset>
+            <fieldset class="contact__fieldset">
+                <label class="contact__label" for="message">Message *:</label>
+                <textarea class="contact__form-element" id="comment" name="comment" rows="10"
+                    cols="auto">Write your message here...</textarea>
+            </fieldset>
+            <fieldset class="contact__fieldset">
+                <input type="submit" class="button contact__button" value="submit"></input>
+            </fieldset>
+        </form>
+    </section>
+    <!--End Contact Us -->
+    <!--Footer-->
+    <footer class="footer">
+        <section class="container">
+            <div class="footer__wrapper">
+                <div class="footer-address">
+                    <h1 class="footer__logo">
+                        <a href="index.html" title="Home">
+                            <img src="./assets/img/logos/circle.svg" alt="Circle" />
+                        </a>
+                    </h1>
+                    <address class="footer-address__address">
+                        2972 Westheimer Rd. Santa Ana,
+                        <br /> Illinois 85486
+                    </address>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Team</a>
+                    <a href="/index.html#services">Services</a>
+                    <a href="#">About Us </a>
+                    <a href="#">Press </a>
+                    <a href="/index.html#projects">Projects</a>
+                    <a href="#" target="_blank">Privacy Police </a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!--End Footer-->
+    <script type="text/javascript" src="./js/javascript.js"></script>
+</body>
+
+</html>
