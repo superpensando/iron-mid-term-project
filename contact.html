@@ -47,27 +47,29 @@
         <form id="contact__form" class="contact__form" action="" method="post">
             <!-- Name: Email: Comment: Receive email updates? Submit -->
             <fieldset class="contact__fieldset">
-                <label class="contact__label" for="name">Full Name*:</label>
-                <input class="contact__form-element" type="text" id="name" name="name" required=""
+                <label class="contact__label" for="name">Full Name *:</label>
+                <input class="form__field contact__form-element" type="text" id="name" name="name" required="true"
                     placeholder="Enter your full name">
             </fieldset>
             <fieldset class="contact__fieldset">
-                <label class="contact__label" for="email">Email:</label>
-                <input class="contact__form-element" type="email" name="email" id="email"
+                <label class="contact__label" for="email">Email *:</label>
+                <input class="form__field contact__form-element" type="email" name="email" id="email" required="true"
                     placeholder="Enter your email address" />
             </fieldset>
             <fieldset class="contact__fieldset">
-                <label class="contact__label" for="phone">Phone:</label>
-                <input class="contact__form-element" type="phone" name="phone" id="phone"
+                <label class="contact__label" for="phone">Phone *:</label>
+                <input class="form__field contact__form-element" type="phone" name="phone" id="phone"  required="true"
                     placeholder="Enter your phone number" />
             </fieldset>
             <fieldset class="contact__fieldset">
                 <label class="contact__label" for="message">Message *:</label>
-                <textarea class="contact__form-element" id="comment" name="comment" rows="10"
-                    cols="auto">Write your message here...</textarea>
+                <textarea class="form__field contact__form-element" id="comment" name="comment" rows="10"
+                    cols="auto" required="true">Write your message here...</textarea>
             </fieldset>
             <fieldset class="contact__fieldset">
-                <input type="submit" class="button contact__button" value="submit"></input>
+                <input type="submit" class="contact__button button" value="Submit"></input>
+            </fieldset>
+            <fieldset class="contact__fieldset-message">
             </fieldset>
         </form>
     </section>
@@ -100,6 +102,7 @@
     </footer>
     <!--End Footer-->
     <script type="text/javascript" src="./js/javascript.js"></script>
+    <script type="text/javascript" src="./js/javascriptContact.js"></script>
 </body>
 
 </html>

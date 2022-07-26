@@ -598,13 +598,6 @@ img {
     margin-left: 1.5625rem;
 }
 
-.newsletter__message {
-    padding: 1rem;
-    font-size: 1rem;
-    text-align: center;
-    background-color: #ddd;
-}
-
 /* Project Detail */
 
 .project-detail__subtitle {
@@ -668,6 +661,7 @@ img {
 
 /* Contact */
 .contact__form {
+    position: relative;
     margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -763,6 +757,14 @@ img {
     width: 100%;
     box-sizing: border-box;
 }
+.contact__fieldset-message {
+    position:absolute;
+    width:100%;
+    bottom:-90px;
+    left:0; 
+    box-sizing: border-box;
+
+}
 
 
 
@@ -812,8 +814,22 @@ img {
     text-decoration: underline;
 }
 
-
-
+/* Forms */
+.error {
+    border:2px solid red; 
+}
+.send__message {
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #A6DEC1;
+}
+.fail__message {
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #f8d3d3;
+}
 
 
 
